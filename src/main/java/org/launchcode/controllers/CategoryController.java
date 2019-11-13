@@ -43,8 +43,8 @@ public class CategoryController {
 //Save the new Category object by calling categoryDao.save(category).
 //Redirect to the index handler for CategoryController by returning the string "redirect:"
     @RequestMapping(value="add", method = RequestMethod.POST)
-    public String add(Model model,
-                      @ModelAttribute @Valid Category newCategory, Errors errors) {
+    public String processAddCategoryForm(@ModelAttribute @Valid Category newCategory,
+                                         Errors errors, Model model) {
 
         if (errors.hasErrors()) {
 
