@@ -80,11 +80,6 @@ public class CheeseController {
         return "redirect:";
     }
 
-//    TODO: BONUS
-//    Within CheeseController, create a handler named category that responds to GET requests
-//    at URLs like /cheese/category/2, where 2 may be the ID of any category in the system.
-//    This handler should retrieve all cheeses in the given category and pass them into the
-//    view. You should use the cheese/index.html template to display the results,
-//    with an appropriate title.
+
 
 }

@@ -82,7 +82,7 @@ public class MenuController {
         return "menu/add-item";
     }
 
-    @RequestMapping(value = "add-item/{menuId}", method = RequestMethod.POST)
+    @RequestMapping(value = "add-item", method = RequestMethod.POST)
     public String processAddItem(Model model, @ModelAttribute @Valid AddMenuItemForm form, Errors errors) {
 
         if (errors.hasErrors()) {
@@ -97,12 +97,6 @@ public class MenuController {
 
         return "redirect:/menu/view/" + theMenu.getId();
     }
-
-// TODO: Add item to menu
-
-
-
-
 
 
 }
