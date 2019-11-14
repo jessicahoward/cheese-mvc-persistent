@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping(value = "menu")
+@RequestMapping("menu")
 public class MenuController {
 
     @Autowired
@@ -67,7 +67,7 @@ public class MenuController {
         model.addAttribute("cheeses", menu.getCheeses());
         model.addAttribute("menuId", menu.getId());
 
-        return "menu/view";
+        return "/menu/view";
     }
 
     @RequestMapping(value = "add-item/{menuId}", method = RequestMethod.GET)
@@ -99,7 +99,6 @@ public class MenuController {
     }
 
 // TODO: Add item to menu
-// TODO: Display individual menus
 
 
 
